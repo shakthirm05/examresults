@@ -12,7 +12,7 @@ $marks8=array("rollnumber"=>'1008',"english"=>'86',"tamil"=>'98',"social"=>'96',
 $marks9=array("rollnumber"=>'1009',"english"=>'96',"tamil"=>'97',"social"=>'99',"science"=>'94',"maths"=>'100');
 $marks10=array("rollnumber"=>'1010',"english"=>'89',"tamil"=>'98',"social"=>'93',"science"=>'87',"maths"=>'100');
 $mark=null;
-var_dump($_GET);
+//var_dump($_GET);
 $rollnumber=$_GET["rollnumber"];
 
 $servername="localhost";
@@ -22,10 +22,10 @@ $database="shakthischool";
 $conn=mysqli_connect($servername,$username,$password,$database);
 $sql="SELECT * FROM shakthimarks WHERE rollnumber=$rollnumber";
 
-var_dump($sql);
+//  var_dump($sql);
 $result=mysqli_query($conn,$sql); 
 $count=mysqli_num_rows($result);
-var_dump($count);
+//var_dump($count);
 $row=mysqli_fetch_assoc($result);
 
 /*switch($rollnumber){
@@ -74,8 +74,8 @@ case"1004":
 // $mark["maths"]=$row["marks"]
 
 //var_dump ($GLOBALS);
-var_dump($_GET);
-var_dump($_POST);
+/*var_dump($_GET);
+var_dump($_POST);*/
 
 ?>
 <html>
@@ -89,6 +89,7 @@ var_dump($_POST);
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
             border-collapse: collapse;
             width: 30%;
+            background-color:white;
         }
 
         td,
@@ -101,16 +102,79 @@ var_dump($_POST);
         tr:nth-child(even) {
             background-color: #dddddd;
         }
+        body{
+                background-image:url("login1.avif");
+                margin:0;
+            }
+            div.header{
+                border:1px solid rgb(204,196,196);
+                border-collapse: collapse;
+                height:50px;
+                text-align: center;
+  text-transform: uppercase;
+  color:black;
+  padding:3px ;
+            }
+            div.menu{
+                border:1px solid rgb(204, 196, 196);
+                border-collapse: collapse;
+                background-color:rgb(178,190,181) ;
+                height:30px;
+                text-align:center ;
+                text-transform:uppercase ;
+                color:white;
+                width:100%;
+                
+            }
+            div.content1{
+                margin: auto;
+  max-width: 40%;
+  
+  border: 3px solid black;
+  
+  padding: 10px;
+  margin-top:100px ;
+ 
+  
+  text-transform: uppercase;
+            }
+            div.content{
+
+
+
+padding:10px;
+
+            }
+            a{
+                display:block;
+                text-decoration:none ;
+                color:black;
+                text-align: end;
+            }
+            div.content2{
+                
+                text-align: center;
+            }
+            h{
+                text-transform: capitalize;
+                font-family: Arial, Helvetica, sans-serif;
+
+            }
+        
     </style>
 </head>
 
 <body>
-
+<div class="header">
+shakthi's school</div>
+<div class="menu">examination results</div>
 
    
 
     <?php if($row != null) { ?>
         <center>
+            <div class="content">
+                <div class="content1">
         <table>
             <tr>
                 <th>
@@ -179,6 +243,10 @@ echo $row["maths"] ;
             </tr>
 
         </table>
+    
+<a href="index.html">back to login</a>
+    </div>
+    </div>
     </center>
             
 <?php }
@@ -187,8 +255,7 @@ else{
     }?>
     
    
-    <a href="index.html">back</a>
-
+    
 
 
 </body>

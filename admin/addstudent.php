@@ -28,6 +28,7 @@ VALUES ($rollnumber, '$studentname', $english,$tamil,$social,$science,$maths)";
 
 if(mysqli_query($conn, $sql)){
   echo "the data stored succeesfully";
+  header("Location: index.php");
 }
 else{
   echo"error in creating new record";

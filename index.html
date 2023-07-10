@@ -3,11 +3,80 @@
         <title>
 
         </title>
+        <style>
+            body{
+                background-image:url("login1.avif") ;
+            }
+            div.header{
+                height:70px;
+            }
+            div.menu{
+                background-color:white ;
+                height:65%;
+                width:40%;
+                margin:auto;
+                position:relative;
+            }
+            div.style{
+                width:40%;
+                height:100%;
+                background-image:url("Screenshot\ \(5\).png") ;
+                background-repeat:none ;
+            }
+            div.style1{
+                position:absolute;
+                height:100%;
+                width:45%;
+                top:70px;
+                right:0px;
 
+            }
+            .shak{
+                border-radius:20px ;
+                padding:10px;
+                margin:6px;
+                box-shadow:0px 0px 15px 4px ;
+                font-family:monospace;
+                
+
+            }
+            .shak1{
+                background-color: #7c7878;
+  color: white;
+  padding: 10px 50px 10px 50px ;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius:4px ;
+  margin:35px;
+            }
+            a{
+                position:absolute;
+                bottom:75px;
+                right:5px;
+
+            }
+            
+        </style>
     </head>
+
     <body>
-        <a href="checkresults.html"><h>CHECKRESUT</h></a>   <br>
-        <a href="addmarks.html"><h>ADDMARKS</h></a><br>
-        <a href="showmarks.php"><h>VIEWSTUDENTLIST</h></a><br>
+        <div class="header"></div>
+        <div class="menu">
+          <div  class="style"></div>
+          <div class="style1">
+            <form action="checkresults.php" method="get">
+                <label for="rollnumber" ></label><br>
+                <input type="text" id="rollnumber" name="rollnumber" placeholder="rollnumber" class="shak"><br>
+                <!--<label for="password"></label><br>
+                <input type="password" id="password" name="password" placeholder="password" class="shak"><br>-->
+             <button type="submit" class="shak1">login</button>  
+             <a href="admin/index.php">admin</a>
+            
+            
+            </form>
+
+          </div>
+        </div>
     </body>
 </html>

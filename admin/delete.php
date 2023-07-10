@@ -17,7 +17,7 @@ $sql = "DELETE FROM shakthimarks WHERE rollnumber=$example ";
 
 if (mysqli_query($conn, $sql)) {
   echo "Record deleted successfully";
- header("Location: showmarks.php");
+ header("Location:trial.php");
  mysqli_close($conn);
 } else {
   echo "Error deleting record: " . mysqli_error($conn);
