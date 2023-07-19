@@ -1,7 +1,7 @@
 <?php
 //$ref=array("english","social","physics","maths","tamil");
 
-$marks1=array("rollnumber"=>'1001',"english"=>'100',"tamil"=>'100',"social"=>'100',"science"=>'99',"maths"=>'100');
+/*$marks1=array("rollnumber"=>'1001',"english"=>'100',"tamil"=>'100',"social"=>'100',"science"=>'99',"maths"=>'100');
 $marks2=array("rollnumber"=>'1002',"english"=>'98',"tamil"=>'99',"social"=>'100',"science"=>'97',"maths"=>'100');
 $marks3=array("rollnumber"=>'1003',"english"=>'92',"tamil"=>'93',"social"=>'100',"science"=>'96',"maths"=>'100');
 $marks4=array("rollnumber"=>'1004',"english"=>'99',"tamil"=>'99',"social"=>'100',"science"=>'91',"maths"=>'100');
@@ -11,7 +11,7 @@ $marks7=array("rollnumber"=>'1007',"english"=>'98',"tamil"=>'78',"social"=>'100'
 $marks8=array("rollnumber"=>'1008',"english"=>'86',"tamil"=>'98',"social"=>'96',"science"=>'97',"maths"=>'100');
 $marks9=array("rollnumber"=>'1009',"english"=>'96',"tamil"=>'97',"social"=>'99',"science"=>'94',"maths"=>'100');
 $marks10=array("rollnumber"=>'1010',"english"=>'89',"tamil"=>'98',"social"=>'93',"science"=>'87',"maths"=>'100');
-$mark=null;
+$mark=null;*/
 //var_dump($_GET);
 $rollnumber=$_GET["rollnumber"];
 

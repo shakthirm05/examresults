@@ -141,8 +141,8 @@ shakthi's school</div>
                 <th>
                     Maths
                 </th>
-                <th>
-</th>
+            
+
                 
             </tr>
 
