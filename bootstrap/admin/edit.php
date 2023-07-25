@@ -1,54 +1,58 @@
+<?php include 'header.php'?>
 <?php
+
 $rollnumber=$_GET["rollnumber"];
 
 $servername="localhost";
-$username="root";
-$password="";
-$databasename="shakthischool";
+ $username="root";
+ $password="";
+ $databasename="shakthischool";
 
 $conn=mysqli_connect($servername,$username,$password,$databasename);
 if(isset($_POST["submit"])){
-    $rollnumber=$_post["rollnumber"];
-    $studentname=$_POST["studentname"];
-    $english=$_POST["english"];
-    $tamil=$_POST["tamil"];
-    $social=$_POST["social"];
-    $science=$_POST["science"];
-    $maths=$_POST["maths"];
-    $sql="UPDATE shakthimarks SET rollnumber='$rollnumber',studentname='$studentname',english='$english',tamil='$tamil',social='$social',science='$science',maths='$maths' WHERE rollnumber='$rollnumber'";
-  var_dump($sql);
- $resul=mysqli_query($conn,$sql);
- var_dump($resul);
-//   header("Location:showtables.php");
+
+//     else{
+//      echo   "error in updating value";
+$studentname=$_POST["studentname"];
+$english=$_POST["english"];
+$tamil=$_POST["tamil"];
+$social=$_POST["social"];
+$science=$_POST["science"];
+$maths=$_POST["maths"];
+//     }
+   $array=array($rollnumber,$studentname,$english,$tamil,$social,$science,$maths);
+   if (edit($array)){
+    header("Location:showtables.php");
+}   
+   
+ 
+//     $sql="UPDATE shakthimarks SET rollnumber='$rollnumber',studentname='$studentname',english='$english',tamil='$tamil',social='$social',science='$science',maths='$maths' WHERE rollnumber='$rollnumber'";
+//   var_dump($sql);
+//  $resul=mysqli_query($conn,$sql);
+//  var_dump($resul);
+// //   header("Location:showtables.php");
 
 }
+
 // else{
-    // echo "error in updating";
+//     echo "error in updating";
 // }
+
 $sql="SELECT * FROM shakthimarks WHERE rollnumber=$rollnumber";
 
 $result=mysqli_query($conn, $sql);
+// var_dump($result);
 $row=mysqli_fetch_assoc($result);
 
 mysqli_close($conn);
 ?>
 
-<html>
-    <head>
-        <title>
+<?php include 'footer.php'?>
 
-        </title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    </head>
+<html>
+   
 <body>
-    <div class="container-fluid p-5 bg-primary text-white text-center ">
-        <div class="page-header ">
-            STUDENT TABLE
-        </div>
-    </div>
+   
    
     <div class="container  text-black d-flex text-center p-3 col-md-4 justify-content-center" >
         <form class="align-items-center border p-5 mt-5" action="" method="post">
@@ -74,12 +78,7 @@ mysqli_close($conn);
        
           
 
-          <footer class="footer mt-auto py-3 bg-primary fixed-bottom">
-            <div class="container">
-                <span class="text-body-secondary">Place sticky footer content here.</span>
-            </div>
-        </footer>
-
+   
 
 </body>
 

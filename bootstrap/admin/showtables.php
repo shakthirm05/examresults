@@ -1,24 +1,26 @@
-<?php
-$servername="localhost";
-$username="root";
-$password="";
-$databasename="shakthischool";
+<?php include 'header.php'?>
+<?php include 'footer.php'?>
 
-$conn=mysqli_connect($servername,$username,$password,$databasename);
-$sql="SELECT * FROM shakthimarks";
+<?php
+
+// $servername="localhost";
+// $username="root";
+// $password="";
+// $databasename="shakthischool";
+
+// $conn=mysqli_connect($servername,$username,$password,$databasename);
+// $sql="SELECT * FROM shakthimarks";
+// $result=mysqli_query($conn,$sql);
+// $count=mysqli_num_rows($result);
+if(showtables($array)){
+
+
 $result=mysqli_query($conn,$sql);
 $count=mysqli_num_rows($result);
-?>
-<html>
-    <head>
-        <title>
-</title>
-<meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-<head>
+?>
+
+<html>
     <body>
     <div class="container-fluid p-5 bg-primary text-white text-center ">
         <div class="page-header ">
@@ -84,6 +86,7 @@ $count=mysqli_num_rows($result);
             </div>
         </footer>
     </body>
+    <?php }?>
     <?php mysqli_close($conn);
     ?>
     

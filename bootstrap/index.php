@@ -1,4 +1,4 @@
-<?php 
+<?php /*
 $cookie_name = "rollnumber";
 
 setcookie($cookie_name, $_GET["rollnumber"], time() + (86400 * 30), "/"); // 86400 = 1 day
@@ -12,7 +12,7 @@ if(isset($_GET["option1"])) {
   echo "Cookie '" . $cookie_name . "' is set!<br>";
   
 }
-
+*/
 
 ?>
 

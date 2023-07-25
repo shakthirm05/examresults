@@ -1,3 +1,5 @@
+<?php include("dbconfig.php"); ?>
+<?php include("function.php");?>
 <html>
 
 <head>
